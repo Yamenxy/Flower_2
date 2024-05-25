@@ -1318,15 +1318,19 @@ mask-image: linear-gradient(to top, transparent 40%, #079097 80%) !important;
             </div>
           </div>
         </div>
+        <div class="name" id="name" style="color:#06befb;"></div>
+
         <script>
-            onload = () => {
-    const c = setTimeout(() => {
-      document.body.classList.remove("not-loaded");
-      clearTimeout(c);
-    }, 1000);
-  };
+            window.onload = function() {
+                var userName = prompt("Please enter your name:");
+                document.getElementById("name").textContent = userName;
+                
+                const c = setTimeout(() => {
+                    document.body.classList.remove("not-loaded");
+                    clearTimeout(c);
+                }, 1000);
+            };
         </script>
-                <div class="name" style="color:#06befb;">Hasnaa</div>
 
 </body>
-</body>
+</html>
